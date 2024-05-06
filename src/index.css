@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outLineBtn {
+  @apply px-6 py-2 bg-bgOrangeRed border border-bgSilver text-white font-bold rounded-full;
+}
+.admissionBtn {
+  @apply px-12 py-2 bg-black border border-bgSilver text-white rounded-full;
+}
+.buyNowBtn {
+  @apply px-4 py-[2px] bg-bgOrangeRed text-white rounded-full font-semibold lg:text-sm
+               hover:bg-bgSilver hover:text-white transition-all duration-300;
+}
+.navLinkBtn {
+  position: relative;
+}
+.navLinkBtn::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+  border-radius: 25px;
+  transform: scaleX(0);
+  background: #ff4200;
+}
+.navLinkBtn:hover::before {
+  transform: scaleX(1);
+}
+
+.onlineCourseBtn {
+  @apply px-0 py-2 text-sm lg:text-[15px] bg-bgOrangeRed text-white rounded-xl font-semibold;
+}
+.onlineCourseBtnTwo {
+  @apply px-0 py-2 text-sm lg:text-[15px] bg-bgButton text-slate-500 font-semibold rounded-xl;
+}
+
+.onlineCourseBtnBuy {
+  @apply px-24 py-3 bg-bgOrangeRed text-white font-bold text-sm rounded-md
+               hover:bg-slate-200 hover:text-bgColor transition-all duration-300;
+}
+
+.descriptionBtn {
+  @apply px-0 relative inline-block cursor-pointer font-medium text-[10px] lg:text-lg text-slate-500;
+}
+.descriptionBtn-group {
+  @apply text-bgOrangeRed;
+}
+.descriptionBtn-span {
+  @apply absolute inset-x-0 -bottom-2 h-0.5 bg-bgOrangeRed transform scale-x-0
+  origin-left transition-transform group-only-of-type:scale-x-100;
+}
+.shadow-all {
+  box-shadow: 0px 1px 2px 2px;
+  color: "#C4C4C4";
+}
+
+.bgStory {
+  background-image: url(../src/assets/story-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.bgOurTeam {
+  background-image: url(../src//assets//OurTem-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
